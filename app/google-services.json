@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "181739719416",
+    "project_id": "registration-93c6e",
+    "storage_bucket": "registration-93c6e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:181739719416:android:83bd1188652250d3c4490d",
+        "android_client_info": {
+          "package_name": "com.depi.candroid1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATMyAy2q9gIOJZb834qH5xTkz3eEOuHtI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
