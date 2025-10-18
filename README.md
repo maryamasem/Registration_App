@@ -30,7 +30,7 @@ A modern **Registration and Authentication App** built with **Kotlin** and **Fir
 ## 🧠 Tech Stack
 
 - **Language:** Kotlin
-- **UI:** XML / Jetpack Compose
+- **UI:** XML 
 - **Backend:** Firebase Authentication
 - **IDE:** Android Studio
 
