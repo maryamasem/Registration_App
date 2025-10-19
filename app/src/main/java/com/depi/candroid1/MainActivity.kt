@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        // firebase auth
         auth = Firebase.auth
-
 
         binding.alreadyUserTv.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
@@ -48,11 +48,11 @@ class MainActivity : AppCompatActivity() {
             val conPass = binding.confirmPassEt.text.toString()
 
             if (email.isBlank() || password.isBlank() || conPass.isBlank())
-                Toast.makeText(this, "Missing field/s", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.missing_field), Toast.LENGTH_SHORT).show()
             else if (password.length < 6)
-                Toast.makeText(this, "Short password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.short_password), Toast.LENGTH_SHORT).show()
             else if (password != conPass)
-                Toast.makeText(this, "Passwords don't match", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.passwords_don_t_match), Toast.LENGTH_SHORT).show()
             else{
                 binding.loadingProgress.isVisible = true
                 // Sign Up logic
@@ -79,7 +79,7 @@ class MainActivity : AppCompatActivity() {
         user!!.sendEmailVerification()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(this, "Check your Email", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.check_your_email), Toast.LENGTH_SHORT).show()
                     binding.loadingProgress.isVisible = false
                     startActivity(Intent(this, LoginActivity::class.java))
                     finish()

@@ -42,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
             val password = binding.passEt.text.toString()
 
             if (email.isBlank() || password.isBlank())
-                Toast.makeText(this, "Missing field/s", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.missing_field, Toast.LENGTH_SHORT).show()
             else{
                 binding.loadingProgress.isVisible = true
                 //login logic
@@ -57,7 +57,7 @@ class LoginActivity : AppCompatActivity() {
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         binding.loadingProgress.isVisible = false
-                        Toast.makeText(this, "Email Sent! ", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, getString(R.string.email_sent), Toast.LENGTH_SHORT).show()
                     }
                 }
 
@@ -75,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
                         finish()
                     }
                     else
-                        Toast.makeText(this, "Check your Email!!!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, R.string.check_your_email, Toast.LENGTH_SHORT).show()
                     }
                     else {
                     Toast.makeText(this, task.exception?.message, Toast.LENGTH_SHORT).show()
@@ -83,6 +83,7 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
+    // one time login
     public override fun onStart() {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.

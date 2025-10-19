@@ -3,4 +3,11 @@
     <string name="already_a_user"><u>Already a user?</u></string>
     <string name="forget_your_password"><u>Forget your password?</u></string>
     <string name="new_user"><u>New User?</u></string>
+    <string name="check_your_email">Check your Email</string>
+    <string name="missing_field">Missing field/s</string>
+    <string name="short_password">Short password</string>
+    <string name="passwords_don_t_match">Passwords don\'t match</string>
+    <string name="email_sent">"Email Sent! "</string>
+    <string name="hello">Hello, %1$s!</string>
+    <string name="name">name</string>
 </resources>

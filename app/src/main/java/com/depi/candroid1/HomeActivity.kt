@@ -24,17 +24,16 @@ class HomeActivity : AppCompatActivity() {
         }
 
 
-        val username = intent.getCharSequenceExtra("name")
+        val username = intent.getCharSequenceExtra(getString(R.string.name))
         val usernameTv: TextView = findViewById(R.id.username_tv)
-        usernameTv.text = "Hello, $username!"
-
+        usernameTv.text = getString(R.string.hello, username)
 
         val signOut: Button = findViewById(R.id.signOutBtn)
 
         signOut.setOnClickListener {
             Firebase.auth.signOut()
             startActivity(Intent(this, LoginActivity::class.java))
-            finish()
+            finishAffinity()
         }
     }
 }
